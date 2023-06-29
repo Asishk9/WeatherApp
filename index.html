@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="images/favicon.png" type="image/icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Search for a city..." id="cityInput" spellcheck="false"/>
+            <button onclick="searchWeather()" >Search</button> 
+            <button onclick="getCurrentLocation()"><img src="./images/location.png"></button> 
+        </div>
+        <div class="row weather">
+            <div class="col">
+                <h2 id="cityName"><span></span></h2>
+                <h3 id="weatherDescription"><span></span></h3> 
+            </div>
+            <div class="col">
+                <h1 id="temperature"><span></span></h1>
+            </div>
+            <div class="col">
+                <img id="weatherIcon" src="" /> 
+            </div>  
+            
+        </div>
+        <div class="row details">
+            <div class="col">
+                <h3>FeelsLike</h3>
+                <span id="feelsLike"></span> 
+            </div>
+            <div class="col">
+                <h3>Humidity</h3>
+                <span id="humidity"></span> 
+            </div>
+            <div class="col">
+                <h3>Pressure</h3>
+                <span id="pressure"></span> 
+            </div>
+            <div class="col">
+                <h3>WindSpeed</h3>
+                <span id="windSpeed"></span> 
+            </div>
+            <div class="col">
+                <h3>Sunrise</h3>
+                <span id="sunrise"></span>  
+            </div>
+            <div class="col">
+                <h3>Sunset</h3>
+                <span id="sunset"></span>
+            </div>
+        </div>
+        <div class="fiveday_forecast">
+            <h3>5-day weather forecast</h3>
+            <table>
+              <tr>
+                <td><img id="weather_icon1" src=""></td>
+                <td><span id="date1"></span></td>
+                <td><span id="day1"></span></td>
+                <td><span id="weatherDescription1"></span></td>
+                <td><span id="temp1"></span></td>
+              </tr>
+              <tr>
+                <td><img id="weather_icon2" src=""></td>
+                <td><span id="date2"></span></td>
+                <td><span id="day2"></span></td>
+                <td><span id="weatherDescription2"></span></td>
+                <td><span id="temp2"></span></td>
+              </tr>
+              <tr>
+                <td><img id="weather_icon3" src=""></td>
+                <td><span id="date3"></span></td>
+                <td><span id="day3"></span></td>
+                <td><span id="weatherDescription3"></span></td>
+                <td><span id="temp3"></span></td>
+              </tr>
+              <tr>
+                <td><img id="weather_icon4" src=""></td>
+                <td><span id="date4"></span></td>
+                <td><span id="day4"></span></td>
+                <td><span id="weatherDescription4"></span></td>
+                <td><span id="temp4"></span></td>
+              </tr>
+              <tr>
+                <td><img id="weather_icon5" src=""></td>
+                <td><span id="date5"></span></td>
+                <td><span id="day5"></span></td>
+                <td><span id="weatherDescription5"></span></td>
+                <td><span id="temp5"></span></td>
+              </tr>
+            </table>
+          </div>
+          
+        <div class="row todays_weather">
+            <h3>24-hr weather forecast</h3>
+            <table>
+                <tr>
+                    <td><span id="time1"></span></td>
+                    <td><img id="weathericon1" src=""></td>
+                    <td><span id="tmpr1"></span></td>
+                    <td><span id="speed1"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="time2"></span></td>
+                    <td><img id="weathericon2" src=""></td>
+                    <td><span id="tmpr2"></span></td>
+                    <td><span id="speed2"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="time3"></span></td>
+                    <td><img id="weathericon3" src=""></td>
+                    <td><span id="tmpr3"></span></td>
+                    <td><span id="speed3"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="time4"></span></td>
+                    <td><img id="weathericon4" src=""></td>
+                    <td><span id="tmpr4"></span></td>
+                    <td><span id="speed4"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="time5"></span></td>
+                    <td><img id="weathericon5" src=""></td>
+                    <td><span id="tmpr5"></span></td>
+                    <td><span id="speed5"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="time6"></span></td>
+                    <td><img id="weathericon6" src=""></td>
+                    <td><span id="tmpr6"></span></td>
+                    <td><span id="speed6"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="time7"></span></td>
+                    <td><img id="weathericon7" src=""></td>
+                    <td><span id="tmpr7"></span></td>
+                    <td><span id="speed7"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="time8"></span></td>
+                    <td><img id="weathericon8" src=""></td>
+                    <td><span id="tmpr8"></span></td>
+                    <td><span id="speed8"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script> 
+</body>
+</html>
